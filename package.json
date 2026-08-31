@@ -1,6 +1,11 @@
 {
   "name": "cfa-prep-in",
   "version": "1.0.0",
-  "description": "CFA Prep India - Complete CFA Exam Guide",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "googleapis": "^128.0.0"
+  },
+  "engines": {
+    "node": "22.x"
+  }
 }
