@@ -3,22 +3,37 @@
   "trailingSlash": false,
   "buildCommand": null,
   "outputDirectory": ".",
+  "functions": {
+    "api/lead.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "cfa-prep.in"
+        }
+      ],
+      "destination": "https://www.cfa-prep.in/$1",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/blog/:slug",
       "destination": "/blog/:slug.html"
     },
     {
-      "source": "/level1",
-      "destination": "/level1/index.html"
+      "source": "/blog",
+      "destination": "/blog/index.html"
     },
     {
-      "source": "/level2",
-      "destination": "/level2/index.html"
-    },
-    {
-      "source": "/level3",
-      "destination": "/level3/index.html"
+      "source": "/programs",
+      "destination": "/programs/index.html"
     }
   ],
   "headers": [
